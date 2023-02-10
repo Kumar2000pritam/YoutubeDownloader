@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 2cm;
+            color: white ;
+            
+        }
+        
+        .form {
+            width: 60%;
+            height: 40px;
+            border-radius: 4px ;
+            margin-top: 0.5cm;
+        }
+        .submit{
+            color: blue;
+            border: 2px solid;
+            width :100px;
+            height: 40px;
+            margin-top: 0.25cm;
+
+        }
+    </style>
+</head><body bgcolor="#000080">
+<div class="container">
+<h1 style="letter-spacing: 3px;"><b>YOUTUBE&nbsp; VIDEO&nbsp; DOWNLOADER</b></h1>
+
+
+
+<form action="" method="post" >
+{% csrf_token %}
+
+<label for="link"><b>Enter URL:&nbsp;&nbsp;</b></label>
+<input type="text" id="link" name="link" class="form" placeholder="Enter youtube video link"><br><br>
+<input type="submit" value="Download" class="submit">
+</form>
+<h3><p>{{msg}}</p></h3>
+</div>
+
+</body>
+</html>
