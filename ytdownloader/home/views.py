@@ -9,7 +9,7 @@ def youtube(request):
             link = request.POST['link']
             video = YouTube(link)
             stream = video.streams.get_lowest_resolution()
-            stream.download()
+            stream.download('C:\\Users\\lenovo\\Downloads')
             return render(request, 'home.html',{'msg':'video downloaded'})
         except:
                 return render(request, 'home.html', {'msg':'Video not downloaded or wrong url'})
